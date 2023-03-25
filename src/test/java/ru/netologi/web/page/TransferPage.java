@@ -7,15 +7,16 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class TransferPage {
 
-    public SelenideElement amount = $("[data-test-id='amount'] input");
-    public SelenideElement from = $("[data-test-id='from'] input");
+    private SelenideElement amount = $("[data-test-id='amount'] input");
+    private SelenideElement from = $("[data-test-id='from'] input");
 
-    public SelenideElement transfer = $("[data-test-id='action-transfer']");
+    private SelenideElement transfer = $("[data-test-id='action-transfer']");
 
-    public void velidTransfer(int depositAmount, DataHelper.Card card){
+    public DeshboardPage velidTransfer(int depositAmount, DataHelper.Card card){
         amount.setValue(String.valueOf(depositAmount));
         from.setValue(card.getNumber());
         transfer.click();
-        new DeshboardPage() ;
-    }
+        return new DeshboardPage() ;
+
+}
 }

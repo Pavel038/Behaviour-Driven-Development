@@ -33,10 +33,13 @@ public class DataHelper {
 
     }
 public static Card getCart(){
-        return new Card("5559 0000 0000 0001");
+
+        return new Card("5559000000000001");
 }
 
 public static Card getOtherCard(){
-        return new Card("5559 0000 0000 0002");
+        return new Card("5559000000000002");
 }
+
+
 }
